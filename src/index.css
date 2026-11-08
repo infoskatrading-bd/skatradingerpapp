@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Typography: Plus Jakarta Sans for UI + JetBrains Mono for tabular financial ledgers */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Enterprise Corporate Palette - SKA Nexus Blue */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+  --color-brand-950: #0f172a;
+
+  /* ERP Semantic Status Colors: Financial Ledger & Workflows */
+  --color-erp-success-bg: #f0fdf4;
+  --color-erp-success-border: #bbf7d0;
+  --color-erp-success-text: #15803d;
+
+  --color-erp-warning-bg: #fffbeb;
+  --color-erp-warning-border: #fde68a;
+  --color-erp-warning-text: #b45309;
+
+  --color-erp-danger-bg: #fef2f2;
+  --color-erp-danger-border: #fecaca;
+  --color-erp-danger-text: #b91c1c;
+
+  --color-erp-muted-bg: #f8fafc;
+  --color-erp-muted-border: #e2e8f0;
+  --color-erp-muted-text: #475569;
+}
+
+/* Base Body Styles */
+@layer base {
+  html {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f8fafc;
+    color: #0f172a;
+    line-height: 1.5;
+  }
+}
+
+/* High-Density Data Grid & ERP Table Utilities */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* BDT Financial Amount Formatting */
+.bdt-amount {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+/* Sleek ERP Scrollbar for Wide Data Tables & Ledgers */
+.erp-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.erp-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.erp-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+}
+
+.erp-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}

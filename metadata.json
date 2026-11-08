@@ -1,0 +1,6 @@
+{
+  "name": "SKA NEXUS ERP",
+  "description": "Enterprise ERP frontend for SKA Nexus covering Sales, Purchase, Inventory, Finance, Cash & Bank, CRM, and Administration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
